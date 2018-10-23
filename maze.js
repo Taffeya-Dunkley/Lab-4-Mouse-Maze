@@ -18,4 +18,8 @@ window.onload = function(){
 					
 		});
 	}
-}
+	 end= document.getElementById("end");
+ 	 end.addEventListener("mouseover", function(){
+		alert("You win!");
+	});
+ 	}
