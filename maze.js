@@ -19,7 +19,20 @@ window.onload = function(){
 		});
 	}
 	 end= document.getElementById("end");
+
  	 end.addEventListener("mouseover", function(){
 		alert("You win!");
 	});
- 	}
+
+ 	  start= document.getElementById("start");
+
+ 	  start.addEventListener("click", function(){
+		for(let i=0;i< walls.length;i++){
+				walls[i].classList.remove("youlose");
+			}
+	});
+
+
+
+ 	  }
+ 	
