@@ -37,7 +37,7 @@ window.onload = function(){
 		
 	});
 
- 	maze= maze = document.getElementById("maze");
+ 	maze= document.getElementById("maze");
  	win=false;
 
     maze.onmouseleave = function(){
