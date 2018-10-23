@@ -15,21 +15,28 @@ window.onload = function(){
 		for (i=0;i<walls.length;i++){
 				walls[i].classList.add("youlose")
 			}
-					
+			document.getElementById("status").innerHTML = "Oooops: You lose";			
 		});
 	}
 	 end= document.getElementById("end");
 
  	 end.addEventListener("mouseover", function(){
-		alert("You win!");
+		if(lose==false){
+			document.getElementById("status").textContent = "CONGRATULATIONS: You Win!";
+		}
 	});
 
  	  start= document.getElementById("start");
 
  	  start.addEventListener("click", function(){
+ 	  	lose= false;
+ 	  	document.getElementById("status").innerHTML = "Move your mouse over the &quot;S&quot; to begin."; //
 		for(let i=0;i< walls.length;i++){
 				walls[i].classList.remove("youlose");
+
+				
 			}
+		
 	});
 
 
