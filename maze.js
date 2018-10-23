@@ -32,14 +32,22 @@ window.onload = function(){
  	  	lose= false;
  	  	document.getElementById("status").innerHTML = "Move your mouse over the &quot;S&quot; to begin."; //
 		for(let i=0;i< walls.length;i++){
-				walls[i].classList.remove("youlose");
-
-				
+				walls[i].classList.remove("youlose");	
 			}
 		
 	});
 
+ 	maze= maze = document.getElementById("maze");
+ 	win=false;
 
-
- 	  }
+    maze.onmouseleave = function(){
+		if (win == false){
+			document.getElementById("status").textContent = "Oooops: You lose";
+			for (i=0;i<walls.length;i++){
+				walls[i].classList.add("youlose")
+			}
+			lose = true;
+		}
+	}
+ }
  	
